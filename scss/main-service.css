@@ -540,21 +540,15 @@ html body .no-scroll header .header_wrap .header_nav {
 
 @media (max-width: 768px) {
   html body .no-scroll header .header_wrap .header_nav {
-    display: none;
-    width: 350px;
-    height: 100%;
-    color: black;
-    height: 100vh;
-    background-color: #ffffff;
-    text-align: center;
     position: fixed;
+    width: 300px;
     top: 0;
-    right: 0;
-    z-index: 1000;
+    right: -300px;
+    background-color: #ffffff;
+    height: 100%;
+    padding-top: 0px;
+    z-index: 3;
     margin-top: 0px;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    /* right0まで-250px移動 */
   }
 }
 
@@ -581,8 +575,14 @@ html body .no-scroll header .header_wrap .header_nav ul {
 @media (max-width: 768px) {
   html body .no-scroll header .header_wrap .header_nav ul {
     display: inline-block;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .no-scroll header .header_wrap .header_nav ul #contact-drawer a {
+    background-color: #FBD362;
+    border-bottom: none;
   }
 }
 
@@ -616,6 +616,15 @@ html body .no-scroll header .header_wrap .header_nav ul .g-nav a {
   html body .no-scroll header .header_wrap .header_nav ul .g-nav a {
     -webkit-transform: skewX(0deg);
     transform: skewX(0deg);
+    font-size: 16px;
+    padding: 14px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .no-scroll header .header_wrap .header_nav ul .g-nav a {
+    font-size: 14px;
   }
 }
 
@@ -685,6 +694,7 @@ html body .no-scroll header .header_wrap .btn-gnavi {
 @media (max-width: 560px) {
   html body .no-scroll header .header_wrap .btn-gnavi span:nth-of-type(1) {
     width: 21px;
+    top: 0;
   }
 }
 
@@ -743,14 +753,12 @@ html body .no-scroll header .header_wrap .btn-gnavi.hb-open span:nth-of-type(3) 
   transform: translateY(-10px) rotate(45deg);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  width: 40px;
 }
 
 @media (max-width: 560px) {
   html body .no-scroll header .header_wrap .btn-gnavi.hb-open span:nth-of-type(3) {
-    width: 17px;
     -webkit-transform: translateY(-5px) rotate(230deg);
-    transform: translateY(-5px) rotate(45deg);
+    transform: translateY(-8px) rotate(45deg);
   }
 }
 
@@ -767,7 +775,7 @@ html body .no-scroll .mainvisual {
   html body .no-scroll .mainvisual {
     background-size: 100% 100%;
     height: 395px;
-    background-image: url(../img/service/mainvisual3_sp.png);
+    background-image: url(../img/common/mainservice_mv_sp.png);
   }
 }
 
@@ -810,16 +818,7 @@ html body .no-scroll .mainvisual_wrap .mv_inner_text {
   html body .no-scroll .mainvisual_wrap .mv_inner_text {
     padding: 50px 0px;
     max-width: 500px;
-    background-size: 480px 130px;
-  }
-}
-
-@media (max-width: 768px) {
-  html body .no-scroll .mainvisual_wrap .mv_inner_text {
-    max-width: 450px;
-    width: 90%;
-    padding: 30px 0px;
-    background-size: 410px 90px;
+    background-size: 480px 170px;
   }
 }
 
@@ -827,8 +826,8 @@ html body .no-scroll .mainvisual_wrap .mv_inner_text {
   html body .no-scroll .mainvisual_wrap .mv_inner_text {
     max-width: 306px;
     width: 90%;
-    padding: 75px 0px 79px;
-    background-size: 240px 170px;
+    padding: 42px 0px 41px;
+    background-size: 240px 160px;
   }
 }
 
@@ -849,6 +848,12 @@ html body .no-scroll .mainvisual_wrap .mv_inner_text .top_inner_title {
   font-size: 42px;
 }
 
+@media (max-width: 1024px) {
+  html body .no-scroll .mainvisual_wrap .mv_inner_text .top_inner_title {
+    font-size: 32px;
+  }
+}
+
 @media (max-width: 768px) {
   html body .no-scroll .mainvisual_wrap .mv_inner_text .top_inner_title {
     font-size: 30px;
@@ -858,6 +863,16 @@ html body .no-scroll .mainvisual_wrap .mv_inner_text .top_inner_title {
 @media (max-width: 560px) {
   html body .no-scroll .mainvisual_wrap .mv_inner_text .top_inner_title {
     font-size: 24px;
+  }
+}
+
+html body .no-scroll .mainvisual_wrap .mv_inner_text .top_inner_title .br_sp {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  html body .no-scroll .mainvisual_wrap .mv_inner_text .top_inner_title .br_sp {
+    display: block;
   }
 }
 
@@ -1017,6 +1032,17 @@ html body .no-scroll .content_box h2 {
     height: auto;
     line-height: 30px;
     padding: 21px 0px 24px 0px;
+    background-image: url(../img/common/h2_sp.png);
+  }
+}
+
+html body .no-scroll .content_box h2 .br_sp {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  html body .no-scroll .content_box h2 .br_sp {
+    display: block;
   }
 }
 
@@ -1192,7 +1218,7 @@ html body .no-scroll .content_box .example_block .example_box #male_pic {
     margin-right: 10px;
     margin-left: 0px;
     height: 280px;
-    width: 79px;
+    width: 103px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1288,6 +1314,8 @@ html body .no-scroll .content_box .concept .concept_title {
 @media (max-width: 560px) {
   html body .no-scroll .content_box .concept .concept_title {
     font-size: 22px;
+    margin-bottom: 25px;
+    margin-top: 32px;
   }
 }
 
@@ -1347,13 +1375,14 @@ html body .no-scroll .content_box .curriculum .curriculum_text {
   color: #222222;
   line-height: 1.8;
   letter-spacing: 0.4px;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
   text-align: center;
 }
 
 @media (max-width: 1024px) {
   html body .no-scroll .content_box .curriculum .curriculum_text {
     font-size: 14px;
+    text-align: left;
   }
 }
 
@@ -1363,6 +1392,8 @@ html body .no-scroll .content_box .curriculum .curriculum_sub_title {
   text-align: center;
   margin-bottom: 28px;
   font-weight: 900;
+  line-height: 1.6;
+  letter-spacing: 0.65px;
 }
 
 @media (max-width: 768px) {
@@ -1379,6 +1410,10 @@ html body .no-scroll .content_box .curriculum .curriculum_sub_title {
 
 html body .no-scroll .content_box .curriculum .flow {
   margin-bottom: 148px;
+  max-width: 784px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 125px;
   /*program*/
 }
 
@@ -1389,7 +1424,7 @@ html body .no-scroll .content_box .curriculum .flow {
 }
 
 html body .no-scroll .content_box .curriculum .flow .arrow_down {
-  margin-left: 190px;
+  margin-left: 170px;
 }
 
 @media (max-width: 560px) {
@@ -1403,9 +1438,9 @@ html body .no-scroll .content_box .curriculum .flow .program {
   display: -ms-flexbox;
   display: flex;
   background-color: #FFF9E8;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 36px 0px;
   border-radius: 33px;
   max-width: 784px;
@@ -1463,56 +1498,22 @@ html body .no-scroll .content_box .curriculum .flow .program .program_item .prog
   line-height: 1.6;
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .dli-close {
-  display: inline-block;
-  vertical-align: middle;
-  color: white;
-  line-height: 1;
-  width: 2em;
-  height: 0.1em;
-  background: currentColor;
-  border-radius: 0.1em;
-  position: relative;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  position: absolute;
-  top: -30px;
-  right: 20px;
-  cursor: pointer;
-}
-
-html body .no-scroll .content_box .curriculum .flow .program .dli-close::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: inherit;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
 html body .no-scroll .content_box .curriculum .flow .program .modal_1 {
   position: fixed;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 300px;
   background-color: #FFFFFF;
   display: none;
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   border-radius: 41px;
-  padding: 96px 0 90px 0px;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   z-index: 2;
-  overflow: auto;
   max-height: calc(100vh - 120px);
   /* 「350px」のところはお好みの値でOK */
-  /*btn*/
 }
 
 @media (max-width: 1024px) {
@@ -1533,7 +1534,65 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 {
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_1 img {
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .dli-close {
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+  line-height: 1;
+  width: 2em;
+  height: 0.1em;
+  background: currentColor;
+  border-radius: 0.1em;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: -30px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .dli-close::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap {
+  overflow: auto;
+  height: 500px;
+  padding: 96px 0 91px 0px;
+  /*btn*/
+}
+
+@media (max-width: 1024px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap {
+    width: 730px;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap {
+    width: 80%;
+    height: 400px;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap {
+    padding: 40px 0 40px 0px;
+  }
+}
+
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1544,12 +1603,12 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 img {
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 img {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap img {
     width: 70%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn {
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn {
   width: 708px;
   margin: 0 auto;
   height: 82px;
@@ -1558,24 +1617,24 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn {
 }
 
 @media (max-width: 1024px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn {
     width: 500px;
   }
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn {
     width: 80%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn {
     width: 90%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn p {
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn p {
   display: block;
   text-align: center;
   font-size: 24px;
@@ -1590,7 +1649,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn p {
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn p {
     font-size: 22px;
     height: 75px;
     line-height: 75px;
@@ -1598,7 +1657,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn p {
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .btn p {
     font-size: 18px;
     height: 67px;
     line-height: 67px;
@@ -1606,7 +1665,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .btn p {
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_text {
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .modal_text {
   width: 648px;
   margin: 0 auto;
   line-height: 2.1;
@@ -1614,12 +1673,12 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_tex
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_text {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .modal_text {
     width: 85%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_title {
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .modal_title {
   font-size: 26px;
   font-weight: bold;
   letter-spacing: 0.65px;
@@ -1630,32 +1689,20 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_tit
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_title {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .modal_title {
     font-size: 20px;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_bottom_text {
+html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .modal_bottom_text {
   text-align: center;
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_bottom_text {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_1 .modal_1_wrap .modal_bottom_text {
     width: 85%;
     margin: 0 auto;
   }
-}
-
-html body .no-scroll .content_box .curriculum .flow .program .modal_1:not(.dli-close) {
-  overflow: visible;
-}
-
-html body .no-scroll .content_box .curriculum .flow .program .modal_1:not(.dli-close::before) {
-  overflow: visible;
-}
-
-html body .no-scroll .content_box .curriculum .flow .program .modal_2:not(.dli-close) {
-  overflow: visible;
 }
 
 html body .no-scroll .content_box .curriculum .flow .program .modal_2 {
@@ -1673,10 +1720,9 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 {
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   z-index: 2;
-  max-height: calc(100vh - 120px);
+  max-height: calc(100vh -120px);
   /* 「350px」のところはお好みの値でOK */
-  overflow: auto;
-  /*btn*/
+  /*wrap*/
 }
 
 @media (max-width: 1024px) {
@@ -1728,7 +1774,19 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 .dli-close
           transform: rotate(90deg);
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_2 img {
+html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap {
+  overflow: auto;
+  height: 500px;
+  /*btn*/
+}
+
+@media (max-width: 768px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap {
+    width: 400px;
+  }
+}
+
+html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1740,18 +1798,18 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 img {
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 img {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap img {
     width: 70%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 img {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap img {
     width: 90%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn {
+html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn {
   width: 708px;
   margin: 0 auto;
   height: 82px;
@@ -1760,24 +1818,24 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn {
 }
 
 @media (max-width: 1024px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn {
     width: 500px;
   }
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn {
     width: 80%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn {
     width: 90%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn p {
+html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn p {
   display: block;
   text-align: center;
   font-size: 24px;
@@ -1792,7 +1850,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn p {
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn p {
     font-size: 22px;
     height: 75px;
     line-height: 75px;
@@ -1800,14 +1858,14 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn p {
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .btn p {
     font-size: 20px;
     height: 67px;
     line-height: 67px;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_text {
+html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .modal_text {
   width: 648px;
   margin: 0 auto;
   line-height: 2.1;
@@ -1815,7 +1873,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_tex
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_text {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_2 .modal_2_wrap .modal_text {
     width: 85%;
   }
 }
@@ -1837,8 +1895,6 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 {
   z-index: 2;
   max-height: calc(100vh - 120px);
   /* 「350px」のところはお好みの値でOK */
-  overflow: auto;
-  /*btn*/
 }
 
 @media (max-width: 1024px) {
@@ -1890,7 +1946,19 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 .dli-close
           transform: rotate(90deg);
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_3 img {
+html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap {
+  overflow: auto;
+  height: 500px;
+  /*btn*/
+}
+
+@media (max-width: 768px) {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap {
+    width: 400px;
+  }
+}
+
+html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1901,24 +1969,24 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 img {
 }
 
 @media (max-width: 1024px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 img {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap img {
     width: 500px;
   }
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 img {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap img {
     width: 80%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 img {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap img {
     width: 90%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn {
+html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn {
   width: 708px;
   margin: 0 auto;
   height: 82px;
@@ -1927,24 +1995,24 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn {
 }
 
 @media (max-width: 1024px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn {
     width: 500px;
   }
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn {
     width: 80%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn {
     width: 90%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn p {
+html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn p {
   display: block;
   text-align: center;
   font-size: 24px;
@@ -1959,7 +2027,7 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn p {
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn p {
     font-size: 22px;
     height: 75px;
     line-height: 75px;
@@ -1967,14 +2035,14 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn p {
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .btn p {
     font-size: 20px;
     height: 67px;
     line-height: 67px;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_text {
+html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .modal_text {
   width: 648px;
   margin: 0 auto;
   line-height: 2.1;
@@ -1982,17 +2050,9 @@ html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_tex
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_text {
+  html body .no-scroll .content_box .curriculum .flow .program .modal_3 .modal_3_wrap .modal_text {
     width: 85%;
   }
-}
-
-html body .no-scroll .content_box .curriculum .flow .program .modal_3:not(.dli-close) {
-  overflow: visible;
-}
-
-html body .no-scroll .content_box .curriculum .flow .program .modal_3:not(.dli-close::before) {
-  overflow: visible;
 }
 
 @media (max-width: 560px) {
@@ -2255,14 +2315,6 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_4 .mo
   text-align: center;
 }
 
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_4:not(.dli-close) {
-  overflow: visible;
-}
-
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_4:not(.dli-close::before) {
-  overflow: visible;
-}
-
 html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 {
   position: fixed;
   top: 50%;
@@ -2280,8 +2332,6 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 {
   z-index: 2;
   max-height: calc(100vh - 120px);
   /* 「350px」のところはお好みの値でOK */
-  overflow: auto;
-  /*btn*/
 }
 
 @media (max-width: 1024px) {
@@ -2333,7 +2383,19 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .dl
           transform: rotate(90deg);
 }
 
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 img {
+html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap {
+  overflow: auto;
+  height: 500px;
+  /*btn*/
+}
+
+@media (max-width: 768px) {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap {
+    width: 400px;
+  }
+}
+
+html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2344,24 +2406,24 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 img
 }
 
 @media (max-width: 1024px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 img {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap img {
     width: 500px;
   }
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 img {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap img {
     width: 80%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 img {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap img {
     width: 90%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .btn {
+html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn {
   width: 708px;
   margin: 0 auto;
   height: 82px;
@@ -2370,24 +2432,24 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .bt
 }
 
 @media (max-width: 1024px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn {
     width: 500px;
   }
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn {
     width: 80%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .btn {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn {
     width: 90%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .btn p {
+html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn p {
   display: block;
   text-align: center;
   font-size: 24px;
@@ -2402,7 +2464,7 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .bt
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn p {
     font-size: 22px;
     height: 75px;
     line-height: 75px;
@@ -2410,14 +2472,14 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .bt
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .btn p {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .btn p {
     font-size: 20px;
     height: 67px;
     line-height: 67px;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_text {
+html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .modal_text {
   width: 648px;
   margin: 0 auto;
   line-height: 2.1;
@@ -2425,12 +2487,12 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .mo
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_text {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .modal_text {
     width: 85%;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_title {
+html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .modal_title {
   font-size: 26px;
   font-weight: bold;
   letter-spacing: 0.65px;
@@ -2441,28 +2503,20 @@ html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .mo
 }
 
 @media (max-width: 560px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_title {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .modal_title {
     font-size: 20px;
   }
 }
 
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_bottom_text {
+html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .modal_bottom_text {
   text-align: center;
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_bottom_text {
+  html body .no-scroll .content_box .curriculum .flow .program_second .modal_5 .modal_5_wrap .modal_bottom_text {
     width: 85%;
     margin: 0 auto;
   }
-}
-
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_5:not(.dli-close) {
-  overflow: visible;
-}
-
-html body .no-scroll .content_box .curriculum .flow .program_second .modal_5:not(.dli-close::before) {
-  overflow: visible;
 }
 
 html body .no-scroll .content_box .curriculum .flow .program_second .arrow_right {
@@ -2601,6 +2655,7 @@ html body .no-scroll .content_box .consulting_flow_box .free_block {
   background-color: #EAEEEF;
   padding: 30px 36px;
   margin-top: 21px;
+  border-radius: 7px;
   /*title*/
 }
 
@@ -2621,14 +2676,32 @@ html body .no-scroll .content_box .consulting_flow_box .free_block p {
 }
 
 @media (max-width: 768px) {
-  html body .no-scroll .content_box .consulting_flow img {
+  html body .no-scroll .content_box .consulting_flow .consulting_img_pc {
     display: none;
+  }
+}
+
+html body .no-scroll .content_box .consulting_flow .consulting_img_sp {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  html body .no-scroll .content_box .consulting_flow .consulting_img_sp {
+    display: block;
+    margin: 0 auto;
+    margin-top: 27px;
   }
 }
 
 html body .no-scroll .content_box .point_wrap {
   margin-bottom: 109px;
   /*content*/
+}
+
+@media (max-width: 560px) {
+  html body .no-scroll .content_box .point_wrap {
+    margin-bottom: 80px;
+  }
 }
 
 html body .no-scroll .content_box .point_wrap .point_content {
@@ -2715,12 +2788,6 @@ html body .no-scroll .content_box .point_wrap .point_content .point_circle_block
 html body .no-scroll .content_box .point_wrap .point_content .point_circle_block .point_block .circle p span {
   display: block;
   font-size: 18px;
-}
-
-@media (max-width: 560px) {
-  html body .no-scroll .content_box .point_wrap .point_content .point_circle_block .point_block .circle p span {
-    font-size: 15px;
-  }
 }
 
 html body .no-scroll .content_box .point_wrap .point_content .point_circle_block .point_block .text {
@@ -2896,12 +2963,7 @@ html body .no-scroll .content_box .proceed .proceed_wrap .proceed_text_block h3 
   font-size: 20px;
   color: #F79E46;
   margin-top: 42px;
-}
-
-@media (max-width: 560px) {
-  html body .no-scroll .content_box .proceed .proceed_wrap .proceed_text_block h3 {
-    font-size: 16px;
-  }
+  letter-spacing: 2px;
 }
 
 html body .no-scroll .content_box .proceed .proceed_wrap .proceed_text_block .proceed_text {
@@ -2999,8 +3061,8 @@ html body .no-scroll .content_box .customer_list .profile_content .profile_block
 
 @media (max-width: 560px) {
   html body .no-scroll .content_box .customer_list .profile_content .profile_block .profile img {
-    width: 30%;
-    height: 20%;
+    width: 132px;
+    height: 132px;
   }
 }
 
@@ -3014,6 +3076,8 @@ html body .no-scroll .content_box .customer_list .profile_content .profile_block
   font-weight: bold;
   font-size: 17px;
   line-height: 1.88;
+  vertical-align: bottom;
+  letter-spacing: 0.425px;
 }
 
 @media (max-width: 768px) {
@@ -3057,8 +3121,8 @@ html body .no-scroll .contact_wrap {
 
 @media (max-width: 560px) {
   html body .no-scroll .contact_wrap {
-    margin-bottom: 70px;
-    margin-top: 90px;
+    margin-bottom: 100px;
+    margin-top: 66px;
     text-align: center;
   }
 }
@@ -3067,6 +3131,7 @@ html body .no-scroll .contact_wrap .contact_title {
   font-size: 26px;
   margin-bottom: 36px;
   text-align: center;
+  font-weight: 500;
   /*tab*/
 }
 
@@ -3320,7 +3385,6 @@ html body .no-scroll footer .footer_wrap {
 
 html body .no-scroll footer .footer_wrap .footer_nav ul {
   /*top_title*/
-  /*top_title*/
   /*navlist*/
 }
 
@@ -3346,20 +3410,6 @@ html body .no-scroll footer .footer_wrap .footer_nav ul .nav_top_title {
 @media (max-width: 1024px) {
   html body .no-scroll footer .footer_wrap .footer_nav ul .nav_top_title {
     font-size: 16px;
-  }
-}
-
-html body .no-scroll footer .footer_wrap .footer_nav ul .nav_title {
-  font-weight: bold;
-  margin-top: 19px;
-  font-size: 18px;
-  letter-spacing: 0.45px;
-}
-
-@media (max-width: 1024px) {
-  html body .no-scroll footer .footer_wrap .footer_nav ul .nav_title {
-    font-size: 14px;
-    margin-top: 14px;
   }
 }
 
